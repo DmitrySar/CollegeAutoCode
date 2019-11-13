@@ -1,3 +1,5 @@
+import java.io.*;
+
 class HTTPResult {
 
     private HTTPAnalizer analizer;
@@ -6,7 +8,7 @@ class HTTPResult {
         this.analizer = analizer;
     }
 
-    public void toConsole() {
+    public void toConsole() throws IOException {
         System.out.println(analizer.getResult());
     }
 
