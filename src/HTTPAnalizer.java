@@ -1,11 +1,13 @@
 class HTTPAnalizer {
+
     private HTTPReader reader;
+
     public HTTPAnalizer(HTTPReader reader) {
-        //TODO:
+        this.reader = reader;
     }
 
     public String getResult() {
-        //TODO:
+        return reader.getHTML();
     }
 
 

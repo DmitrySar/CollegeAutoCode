@@ -1,11 +1,13 @@
 class HTTPResult {
+
     private HTTPAnalizer analizer;
+
     public HTTPResult(HTTPAnalizer analizer) {
-        //TODO:
+        this.analizer = analizer;
     }
 
     public void toConsole() {
-        //TODO:
+        System.out.println(analizer.getResult());
     }
 
 

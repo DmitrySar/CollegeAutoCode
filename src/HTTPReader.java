@@ -1,11 +1,13 @@
 class HTTPReader {
+
     private String url;
+
     public HTTPReader(String url) {
-        //TODO:
+        this.url = url;
     }
 
     public String getHTML() {
-        //TODO:
+        return url;
     }
 
 
