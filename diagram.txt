@@ -1,0 +1,30 @@
+@startuml
+class HTTPReader {
+    - String url
+    + HTTPReader(String url)
+    + getHTML(): String
+}
+class HTTPAnalizer {
+    - HTTPReader reader
+    + HTTPAnalizer(HTTPReader reader)
+    + getResult(): String
+}
+class HTTPResult {
+    - HTTPAnalizer analizer
+    + HTTPResult(HTTPAnalizer analizer)
+    + toConsole(): void
+}
+class HTTPController {
+    - HTTPReader reader
+    - HTTPAnalizer analizer
+    - HTTPResult result
+    + main(): void
+    - start(): void
+}
+
+HTTPReader <-left-* HTTPAnalizer
+HTTPAnalizer <-left-* HTTPResult
+HTTPReader <-- HTTPController
+HTTPAnalizer <-- HTTPController
+HTTPResult <-- HTTPController
+@enduml
