@@ -1,3 +1,5 @@
+import java.io.*;
+
 class HTTPAnalizer {
 
     private HTTPReader reader;
@@ -6,9 +8,8 @@ class HTTPAnalizer {
         this.reader = reader;
     }
 
-    public String getResult() {
+    public String getResult() throws IOException {
         return reader.getHTML();
     }
-
 
 }
