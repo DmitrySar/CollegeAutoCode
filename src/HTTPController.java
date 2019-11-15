@@ -18,7 +18,6 @@ class HTTPController {
     }
 
     private void start() throws IOException {
-        //GregorianCalendar calendar = new GregorianCalendar();
         reader = new HTTPReader(url);
         analizer = new HTTPAnalizer(reader);
         result = new HTTPResult(analizer);
