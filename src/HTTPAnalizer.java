@@ -8,7 +8,7 @@ class HTTPAnalizer {
     public HTTPAnalizer(HTTPReader reader) {
         this.reader = reader;
     }
-
+    
     public String getResult() throws IOException {
     	String result = "";
     	String[] doc = reader.getHTML().split("\n");

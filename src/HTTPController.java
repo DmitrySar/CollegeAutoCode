@@ -19,9 +19,13 @@ class HTTPController {
 
     private void start() throws IOException {
         reader = new HTTPReader(url);
+        long startTime = System.currentTimeMillis();
         analizer = new HTTPAnalizer(reader);
         result = new HTTPResult(analizer);
+        System.out.print("carrent time: ");
         result.toConsole();
+        long stopTime = System.currentTimeMillis();
+        System.out.printf("time for work program: %d ms", (stopTime - startTime));
     }
 
 }
