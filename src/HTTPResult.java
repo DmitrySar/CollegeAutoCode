@@ -12,5 +12,4 @@ class HTTPResult {
         System.out.println(analizer.getResult());
     }
 
-
 }
